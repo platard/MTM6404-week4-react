@@ -1,0 +1,65 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "My first JSX",
+  "steps": [
+    {
+      "file": "index.html",
+      "description": "# JSX\r\nWhile JSX may look like HTML, it is more of a template language that uses JS and HTML-like. It Also provides an easier alternative to the createElement() method.\r\n\r\n1. Set up your HTML file: basic HTML code, React and BABEL CDN installation, and the link to a JS file.",
+      "line": 1
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 2\r\n\r\nCreate the Root object\r\n\r\n> const root = ReactDOM.createRoot(document.getElementById('root'))",
+      "line": 1
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 3\r\nCall the .render() method and pass in a JSX top-level component you want to render.\r\n\r\n> `root.render(<h1>Hello, World</h1>)`",
+      "line": 3,
+      "selection": {
+        "start": {
+          "line": 4,
+          "character": 32
+        },
+        "end": {
+          "line": 4,
+          "character": 37
+        }
+      }
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 4: JS expression\r\n\r\nUse JS expressions with { }",
+      "line": 3
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 5: Components\r\n\r\nDefine a functional component named \"Counter\" that returns a JSX element representing a counter section. The component contain at least: title, a counter, and a button.\r\n> `function Counter(props){ return JSX_element }`\r\n\r\nNote that React component names should always start with a capital letter. This ensures that a component is NOT treated as an HTML tag.",
+      "line": 15
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 6\r\nIn this exmaple the component receives an object with 2 properties: 'title' and 'initialCount'. Use those that object called 'prorps' in the JSX element\r\n> `<h1>{props.title}</h1>`\r\n\r\n> `<p>Count: {props.initialCount}</p>`",
+      "line": 15
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 7: Render the component\r\nRender the 'Counter' component. Make sure to define the 'props' as attributes in the component.\r\n> `<Counter title=\"\" initialCounter=\"\" />`",
+      "line": 25
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 8\r\nDefine another component named \"Card\" that returns a JSX element representing a title, a snippet of content, and a link. This time use a 'function expresion' with arrow function. Wrap all the elements using <React.Fragment>\r\n> `const Card = props => (`\r\n\r\n> `<React.Fragment>`\r\n\r\n>       <h2>{props.title}</2>\r\n\r\n>       <p>Biref description </p>\r\n\r\n>       <a href={url}>Read more...</a>\r\n\r\n> `</React.Fragment>`\r\n    \r\n>    `)`    "
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 8: Conditional rendering\r\nAdd a conditional rendering to the link. 'If' the 'url' is provided render the link; 'else', render a message that says 'Link comming soon'.\r\n\r\n> `{props.url ? <a href=\"\">Read More...</a> : <em>Link comming soon!</em> }`",
+      "line": 32
+    },
+    {
+      "file": "app.js",
+      "description": "## Step 9: List rendering\r\n1. Define an array of objects representing articles/blogs. Each object should have properties like id, title, url.\r\n2. Render a list (`<ul>`) inside the `ArticleList` component.\r\n3. Use the map function to iterate over the array of articles and render a list item (`<li>`) for each article. \r\n4. Display on each 'list item', the article's title using 'props'.\r\n5. Add a unique key attribute to each list item using the 'id' property of the article object.\r\n5. Render the ArticleList component within your main application component or in the ReactDOM.render function\r\n",
+      "line": 42
+    }
+  ]
+}
